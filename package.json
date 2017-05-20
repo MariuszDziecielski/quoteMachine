@@ -1,0 +1,30 @@
+{
+  "name": "kodilla-task_12.5",
+  "version": "1.0.0",
+  "description": "Task 12.5",
+  "main": "js/scripts.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MariuszDziecielski/task_12.5.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Mariusz Dziecielski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariuszDziecielski/task_12.5/issues"
+  },
+  "homepage": "https://github.com/MariuszDziecielski/task_12.5#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
