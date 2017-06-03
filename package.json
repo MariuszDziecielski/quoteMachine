@@ -1,14 +1,14 @@
 {
-  "name": "kodilla-task_12.5",
+  "name": "quote_machine",
   "version": "1.0.0",
-  "description": "Task 12.5",
+  "description": "Quote machine",
   "main": "js/scripts.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MariuszDziecielski/task_12.5.git"
+    "url": "https://github.com/MariuszDziecielski/quote_machine.git"
   },
   "keywords": [
     "grunt"
@@ -16,9 +16,9 @@
   "author": "Mariusz Dziecielski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MariuszDziecielski/task_12.5/issues"
+    "url": "https://github.com/MariuszDziecielski/quote_machine/issues"
   },
-  "homepage": "https://github.com/MariuszDziecielski/task_12.5#readme",
+  "homepage": "https://github.com/MariuszDziecielski/quote_machine#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
