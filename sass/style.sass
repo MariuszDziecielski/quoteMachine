@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono')
-$lightColor: #e8effc
+// Variables
+$green: #9fc69f
+$lightGreen: #afcfaf
+$black: #000
+$primFont: 'Droid Sans Mono', monospace
+// Mixins
+=border($borderWidth: 1px, $borderStyle: solid, $borderColor: $black, $radius: 2px)
+    border-width: $borderWidth
+    border-style: $borderStyle
+    border-color: $borderColor
+    border-radius: $radius
+=colors($backgroundColor: $green, $color: $black)
+    background-color: $backgroundColor
+    color: $color
 body 
-    font-family: 'Droid Sans Mono', monospace
-    font-size: 13px
+    font: normal 13px $primFont
     text-align: center
-    background-color: #9fc69f
-    color: black
+    +colors()
 *
     box-sizing: border-box
 img 
@@ -16,8 +27,7 @@ main
     margin: 0 auto 
     header
         .people
-            margin: 0 auto
-            margin-top: 60px
+            margin: 60px auto 0
             img
                 width: 5vw
                 margin: 1vw
@@ -31,9 +41,7 @@ main
                 width: 2vw
                 margin: 1vw 0
             p
-                font-size: 20px
-                font-weight: 700
-                font-style: italic
+                font: italic 700 20px $primFont
         h3
             font-size: 1.3em
             margin-bottom: 90px 
@@ -42,34 +50,25 @@ main
             display: block
             margin: 50px auto
             width: 300px
-            font-size: 15px
-            font-family: 'Droid Sans Mono', monospace
+            font: 700 15px $primFont
             outline: none
-            border: 1px solid black
-            border-radius: 2px
+            +border()
             cursor: pointer
             padding: 9px 14px
-            background-color: #9fc69f
-            color: black
-            font-weight: 700
+            +colors()
             &:hover
-                background-color: #afcfaf
-                color: #000
+                +colors($lightGreen)
         a
-            border: 1px solid black
-            border-radius: 2px
+            +border()
             padding: 9px 14px
             width: 300px
             display: block
-            margin: 40px auto
-            color: black
-            font-size: 15px
-            font-weight: 700
+            color: $black
+            font: 700 15px $primFont
             text-decoration: none
-            margin-bottom: 100px
+            margin: 40px auto 100px
             &:hover
-                background-color: #afcfaf
-                color: #000
+                +colors($lightGreen)
                 text-decoration: underline
 /* Media queries */
 /* For computers: */
