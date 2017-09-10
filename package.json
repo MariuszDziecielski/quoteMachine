@@ -2,7 +2,7 @@
   "name": "quote_machine",
   "version": "1.0.0",
   "description": "Quote machine",
-  "main": "js/scripts.js",
+  "main": "js/QuoteMachine.js",
   "scripts": {
     "test": "test"
   },
