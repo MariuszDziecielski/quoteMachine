@@ -1,19 +1,19 @@
-function QuoteMachine(prefix, tweetLink, quoteUrl) {
-    this.prefix = prefix;
-    this.tweetLink = tweetLink;
-    this.quoteUrl = quoteUrl;
-    $('.trigger').click(() => {
-        this.getQuote();
-    });
-}
-QuoteMachine.prototype = {
-    getQuote: function () {
+class QuoteMachine {
+    constructor(prefix, tweetLink, quoteUrl) {
+        this.prefix = prefix;
+        this.tweetLink = tweetLink;
+        this.quoteUrl = quoteUrl;
+        $('.trigger').click(() => {
+            this.getQuote();
+        });
+    }
+    getQuote() {
         $.getJSON(`${this.prefix}${this.quoteUrl}`, this.createTweet);
         $.ajaxSetup({
             cache: false
         });
-    },
-    createTweet: function (input) {
+    }
+    createTweet(input) {
         const data = input[0],
             quoteText = $(data.content).text().trim();
         let quoteAuthor = data.title;
@@ -30,6 +30,6 @@ QuoteMachine.prototype = {
             $('.tweet').attr('href', tweet);
         }
     }
-};
+}
 const quoteMachine = new QuoteMachine("https://cors-anywhere.herokuapp.com/", "https://twitter.com/intent/tweet?text=", "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1");
 quoteMachine.getQuote();
